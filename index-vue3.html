@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>First - Vue</title>
+    <meta name="description" content="First Vue" />
+  </head>
+  <body>
+    <div id="root">
+      <div id="app">{{ message }}</div>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+      const { createApp, ref } = Vue;
+      createApp({
+        setup() {
+          const message = ref("Hello First Vue3!");
+          return {
+            message,
+          };
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>
